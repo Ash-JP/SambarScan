@@ -47,8 +47,8 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
-![C:\Users\AASHRAY J PRAMOD\OneDrive\Desktop\SambarScan\static\Screenshot 2025-08-02 160636.png](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+[https://github.com/Ash-JP/SambarScan/blob/main/static/Screenshot%202025-08-02%20160636.png]
+*SHOWS THE IMAGE OF THE GOOD SAMBAR AND SAY IT IS GOOD*
 
 ![Screenshot2](Add screenshot 2 here with proper name)
 *Add caption explaining what this shows*
@@ -76,8 +76,8 @@ For Hardware:
 ![Build](Add photos of build process here)
 *Explain the build steps*
 
-![Final](Add photo of final product here)
-*Explain the final build*
+![https://github.com/Ash-JP/SambarScan/blob/main/static/Screenshot%202025-08-02%20160636.png]
+*CHECK WHETHER THE SANBARS IMAGE PROVIDED IS A GOOD SAMBAR OR WATERY SAMBAR *
 
 ### Project Demo
 # Video
