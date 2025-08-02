@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SambarScan™ - AI Consistency Detector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: url('/static/bn.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .container {
+      margin: 30px auto;
+      max-width: 600px;
+      padding: 20px;
+      border-radius: 20px;
+      /* Semi-transparent background for contrast */
+      background-color: rgba(128, 0, 0, 0.6);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      color: #ffcc80;
+    }
+
+    p {
+      color: #ffe0b2;
+      font-style: italic;
+    }
+
+    input[type=file] {
+      margin: 20px;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: #fff8dc; /* cream */
+      border: none;
+      cursor: pointer;
+      color: #333;
+      font-weight: bold;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #fff8dc; /* cream */
+      color: #333;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover, input[type=file]:hover {
+      background-color: #f5deb3; /* darker cream on hover */
+    }
+
+    img {
+      max-width: 300px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .result {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #fffad1;
+    }
+
+    h3 {
+      color: #ffccbc;
+      margin-top: 40px;
+    }
+
+    .bar {
+      width: 100%;
+      background: #eee;
+      height: 20px;
+      border-radius: 10px;
+      margin: 5px 0;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      background: #ffcc80;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🍲 Broth Bureau™</h1>
+    <p><i>Check if your sambar is worth the wait</i></p>
+
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="sambar_image" required>
+      <br>
+      <button type="submit">Check Consistency</button>
+    </form>
+
+    {% if filename %}
+      <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="Uploaded Sambar">
+    {% endif %}
+
+    {% if result %}
+      <div class="result">
+        {{ result|safe }}
+      </div>
+
+      {% for i in range(probabilities|length) %}
+        <div>{{ class_labels[i] }}: {{ (probabilities[i] * 100) | round(2) }}%</div>
+        <div class="bar"><span style="width: {{ probabilities[i]*100 }}%"></span></div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</body>
+</html>
