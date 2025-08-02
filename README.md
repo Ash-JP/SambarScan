@@ -81,11 +81,9 @@ For Hardware:
 
 ### Project Demo
 # Video
-[Add your demo video link here]
+[(https://github.com/Ash-JP/SambarScan/blob/main/WhatsApp%20Video%202025-08-02%20at%2017.12.29_f77ca786.mp4)]
 *Explain what the video demonstrates*
 
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
 - [Aashray J Pramod ]: [ ML model training ]
